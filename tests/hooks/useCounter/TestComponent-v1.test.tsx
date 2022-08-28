@@ -11,6 +11,7 @@ const UseCounterTest = () => {
       <button onClick={() => inc(1)}>inc(1)</button>
       <button onClick={() => dec(1)}>dec(1)</button>
       <button onClick={() => set(10)}>set(10)</button>
+      <button onClick={() => reset()}>reset()</button>
     </section>
   );
 };
@@ -21,7 +22,7 @@ describe("useCounter", () => {
 
     const incBtn = screen.getByText("inc(1)");
 
-    userEvent.click(incBtn);
+    await userEvent.click(incBtn);
 
     expect(screen.getByText("Counter: 1")).toBeInTheDocument();
   });

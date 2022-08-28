@@ -25,8 +25,6 @@ describe("useCounter", () => {
   it("可以做加法", async () => {
     const useCounterData: any = setup(0);
 
-    const incBtn = screen.getByText("inc(1)");
-
     act(() => {
       useCounterData.utils.inc(1);
     });
