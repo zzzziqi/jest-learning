@@ -1,11 +1,12 @@
 import React from "react";
-import { Button } from "antd";
+import User from "components/User";
 
 const App = () => {
   return (
     <div>
-      <h1>Hello</h1>
-      <Button>点我</Button>
+      <section>
+        <User />
+      </section>
     </div>
   );
 };
